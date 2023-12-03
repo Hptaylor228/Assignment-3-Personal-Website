@@ -9,11 +9,14 @@
       h1 {
         font-family: "Pacifico";
         color: white;
+        padding: 10px;
       }
 
       p {
         font-family: "Pacifico";
         font-size: 15px;
+        color: white;
+        padding: 10px;
       }
 
       body {
@@ -129,89 +132,7 @@
           display: block;
         }
       }
-  
-          /*
-Code copied from: https://www.w3schools.com/howto/howto_js_quotes_slideshow.asp
-Author: w3schools.com
-Name: Quote Slideshow
-Description: Makes a quote slideshow 
-Date retrieved: December 3, 2023
-
-
-    <!-- Copied code starts --> */
-      
-      /* Slideshow container */
-.slideshow-container {
-  position: relative;
-  background: #9C61A6;
-}
-
-/* Slides */
-.mySlides {
-  display: none;
-  padding: 80px;
-  text-align: center;
-}
-
-/* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 75%;
-  width: auto;
-  margin-top: -30px;
-  padding: 16px;
-  color: #F9F9F9;
-  font-weight: bold;
-  font-size: 20px;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-}
-
-/* Position the "next button" to the right */
-.next {
-  position: absolute;
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-  color: white;
-}
-
-/* The dot/bullet/indicator container */
-.dot-container {
-  text-align: center;
-  padding: 20px;
-  background: #9C61A6;
-}
-
-/* The dots/bullets/indicators */
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #F9F9F9;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-/* Add a background color to the active dot/circle */
-.active, .dot:hover {
-  background-color: #717171;
-}
-
-/* Add an italic font style to all quotes */
-q {font-style: italic;}
-
-/* Add a blue color to the author */
-.author {color: white;}
-      
- /* <!-- Copied code Ends --> */      
+       
     </style>
   </head>
 
@@ -228,7 +149,7 @@ q {font-style: italic;}
 
     <section>
       <div id="home" class="about-section" style="position: relative;">
-        <img class="mySlides" src="img_la.jpg" style="width:100%" alt="">
+        <img class="mySlides" src="img_la.jpg" style="width:100%" alt="My picture">
       </div>
 
       <div id="about" class="about-section" style="position: relative;">
@@ -275,53 +196,20 @@ q {font-style: italic;}
   <br>
   
    <h1>
-     Movie Quotes
+     Quotes
       </h1>   
    
-      <!--
-Code copied from: https://www.w3schools.com/howto/howto_js_quotes_slideshow.asp
-Author: w3schools.com
-Name: How to create quote slideshow
-Description: Makes quote slide show 
-Date retrieved: December 3, 2023
--->
+<div>
+    <p>When you can't look on the bright side, I will sit with you in the dark.</p>
+    <p>- Alice in Wonderland</p>
 
-    <!-- Copied code starts -->    
-      
-    <!-- Slideshow container -->
-<div class="slideshow-container">
-
-  <!-- Full-width slides/quotes -->
-  <div class="mySlides">
-    <q>When you can't look on the bright side, I will sit with you in the dark.</q>
-    <p class="author">- Alice in Wonderland</p>
-  </div>
-
-  <div class="mySlides">
-    <q>No measure of time with you will be long enough but we'll start with forever. </q>
-    <p class="author">- Stephenie Meyer</p>
-  </div>
-
-  <!-- Next/prev buttons -->
-  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-  <a class="next" onclick="plusSlides(1)">&#10095;</a>
-</div>
-
-<!-- Dots/bullets/indicators -->
-<div class="dot-container">
-  <span class="dot" onclick="currentSlide(1)"></span> 
-  <span class="dot" onclick="currentSlide(2)"></span> 
-  <span class="dot" onclick="currentSlide(3)"></span> 
-</div>  
-      
-  <!-- Copied Code ends -->  
-      
-      
-      <img class="mySlides" src="img_ny.jpg" style="width:100%" alt="">
-
+    <p>No measure of time with you will be long enough but we'll start with forever.</p>
+    <p>- Stephenie Meyer</p>
+  </div>    
+    
       <div id="concerts" class="Concerts-section" style="position: relative;">
         <h1>Concert</h1>
-        <p>Some text about who we are and what we do.</p>
+        <p>Monday November 20, 2023: The 1975</p>
         <p>Resize the browser window to see that this page is responsive by the way.</p>
       </div>
 
@@ -421,45 +309,6 @@ Date retrieved: November 28, 2023
  
       /* <!-- Copied code ends --> */
       
-                /*
-Code copied from: https://www.w3schools.com/howto/howto_js_quotes_slideshow.asp
-Author: w3schools.com
-Name: Quote Slideshow
-Description: Makes a quote slideshow 
-Date retrieved: December 3, 2023
-
-
-    <!-- Copied code starts --> */
-      
-
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1} 
-    if (n < 1) {slideIndex = slides.length}
-    for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none"; 
-    }
-    for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-    }
-  slides[slideIndex-1].style.display = "block"; 
-  dots[slideIndex-1].className += " active";
-}
-      
-        let slideIndex = 1;
-         showSlides(slideIndex);
-
-        function plusSlides(n) {
-          showSlides(slideIndex += n);
-        }
-
-        function currentSlide(n) {
-          showSlides(slideIndex = n);
-        }    
-      
-   /*   <!-- Copied code ends --> */   
     </script>
     
   </body>
